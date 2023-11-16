@@ -45,9 +45,9 @@ resource "aws_subnet" "private_subnet2" {
   cidr_block = var.private_subnet2_cidr_block
 availability_zone = var.availability_zone[1]
  
-tags = merge(var.tags,{
-    Name = "${var.tags["project"]}-${var.tags["application"]}-${var.tags["environment"]}-private_subnet2"
-  })  
+ tags = merge(var.tags,{
+    Name = "${var.tags["project"]}-${var.tags["application"]}-${var.tags["environment"]}-private_subnet1"
+  })   
 }
 
 resource "aws_internet_gateway" "gw" {
